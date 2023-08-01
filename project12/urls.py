@@ -17,13 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from app.views import *
+from app3.views import *
 import app1,app2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('naruto/',naruto,name='naruto'),
+    path('goku/',goku,name='goku'),
     path('sasuke/',sasuke,name='sasuke'),
     path('app1/',include('app1.urls')),
     path('app2/',include('app2.urls')),
-
+    
 ]
